@@ -2,19 +2,169 @@
 <html>
 <head>
 <style>
-
+.wrapper{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 2%;
+  height: 600px;
+  width: 600px;
+  background-color: pink;
+  perspective: 500px;
+  z-index: 1;
+}
+.left-arm{
+  position: absolute;
+  border: solid 1px black;
+  top: 30%;
+  left: 20%;
+  width: 5%;
+  height: 30%;
+}
+.right-arm{
+  position: absolute;
+  background: red;
+  top: 30%;
+  left: 80%;
+  width: 30%;
+  height: 30%;
+-webkit-clip-path: polygon(50% 44%, 44% 27%, 40% 0, 51% 0, 55% 25%, 67% 55%, 66% 69%, 45% 84%, 36% 85%, 34% 76%, 46% 69%, 55% 60%);
+clip-path: polygon(50% 44%, 44% 27%, 40% 0, 51% 0, 55% 25%, 67% 55%, 66% 69%, 45% 84%, 36% 85%, 34% 76%, 46% 69%, 55% 60%);
+}
+.left-leg{
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  width:8%;
+  height: 30%;
+  transform: rotate(65deg);
+  z-index: 2;
+}
+.right-leg{
+  position: absolute;
+  top: 65%;
+  left: 42%;
+  width: 8%;
+  height: 30%;
+  transform-style: preserve-3d;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+.leg{
+  background: blue;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  border-radius: 40%;
+  z-index: 2;
+}
+.foot{
+  background: blue;
+  position: absolute;
+  bottom: -1%;
+  left: 0;
+  height: 10%;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid black;
+  z-index: 1;
+}
+.corpse{
+  background: white;
+  border: solid 1px black;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width:30%;
+  height: 50%;
+  transform-style: preserve-3d;
+  transform: rotateY(-5deg)translateZ(4em);
+  border-radius: 16px;
+  z-index: 3;
+}
+.corpse-right{
+  background: white;
+  border: solid 1px black;
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  width:29.5%;
+  height: 50%;
+  transform-style: preserve-3d;
+  transform: rotateY(65deg) translateZ(-4em);
+border-radius: 6px;
+}
+.B {
+  border: solid 1px white;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width:50%;
+  height: 20%;
+}
+.M{
+  border: solid 1px black;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  width:50%;
+  height: 20%;
+}
+.O{
+  border: solid 1px white;
+  position: absolute;
+  top: 65%;
+  left: 25%;
+  width:50%;
+  height: 20%;
+}
 </style>
 </head>
 <body>
 
 <div class="wrapper">
-  <div id="left-arm" class="torso"></div>
-  <div id="corpse" class="torso"></div>
-  <div id="right-side" class="torso"></div>
-  <div id="right-arm" class="torso"></div>
+  <div class="left-arm"></div>
+  <div class="right-arm"></div>
 
-  <div id="left-leg" class="lower-body"></div>
-  <div id="right-leg" class="lower-body"></div>
+    <div class="corpse" ></div>
+    <div class="corpse-right">
+
+      <div class="speaker">
+        <div class="speaker-grid"></div>
+      </div>
+
+      <div class="B">
+        <div class="B-left-line"></div>
+        <div class="B-top-loop">
+          <div class="B-inner"></div>
+        </div>
+        <div class="B-bottom-loop">
+          <div class="B-inner"></div>
+        </div>
+      </div>
+      <div class="M">
+        <div class="m-outer-left"></div>
+        <div class="m-inner-left"></div>
+        <div class="m-inner-right"></div>
+        <div class="m-outer-right"></div>
+      </div>
+      <div class="O">
+        <div class="o-outer">
+          <div class="o-inner"></div>
+        </div>
+      </div>
+    </div>
+
+  <div class="left-leg">
+    <div class="leg"></div>
+    <div class="foot"></div>
+  </div>
+  <div class="right-leg">
+    <div class="leg"></div>
+    <div class="foot"></div>
+  </div>
 </div>
 
 </body>
