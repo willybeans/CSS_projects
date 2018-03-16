@@ -11,7 +11,7 @@
     margin-top: 8%;
     width: 600px;
     height: 420px;
-    border: solid 5px red;
+    border: solid 5px grey;
   }
   .head{
     position: absolute;
@@ -72,6 +72,8 @@
 .eye-right{
   position: absolute;
   background: white;
+  width: 30%;
+  height: 33%;
   top: 25%;
   right: 21%;
   border-radius: 50%;
@@ -85,6 +87,37 @@
   left: 36%;
   border-radius: 50%;
   background: #27354A;
+}
+.nose{
+  position:absolute;
+  background: #BE845F;
+  width: 25%;
+  height: 42.5%;
+  left: 37%;
+  top: 45%;
+  border-radius: 50px;
+  z-index: 4;
+}
+.hair-left{
+  position: absolute;
+  top: -8%;
+  left: 30%;
+  width: 20%;
+  height: 20%;
+  background: #A6BECF;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.hair-right{
+  position: absolute;
+  top: -4%;
+  left: 48%;
+  width: 20%;
+  height: 20%;
+  background: #A6BECF;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
 }
 
 </style>
@@ -106,18 +139,12 @@
         <div class="pupil">
         </div>
       </div>
-
-      <!-- Right Outer Eye ~ White -->
       <div class="eye-right">
-        <!-- Pupil ~ Black -->
         <div class="pupil">
         </div>
       </div>
-       <!-- Nose ~ Brown -->
        <div class="nose">
        </div>
-
-       <!-- Hair ~ Light Gray -->
       <div class="hair-left"></div>
       <div class="hair-right"></div>
 
