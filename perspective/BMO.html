@@ -2,16 +2,20 @@
 <html>
 <head>
 <style>
+body{
+  background-color: #0DBFB3;
+}
 .wrapper{
   position: relative;
   margin: auto;
   display: block;
-  margin-top: 2%;
+  margin-top: 1%;
   height: 600px;
   width: 600px;
-  background-color: pink;
   perspective: 500px;
   z-index: 1;
+  background-color: pink;
+  box-shadow: 5px 5px 20px black;
 }
 .left-arm{
   position: absolute;
@@ -23,8 +27,8 @@
 }
 .right-arm{
   position: absolute;
-  top: 55%;
-  left: 56%;
+  top: 55.5%;
+  left: 56.5%;
   width: 10%;
   height: 25%;
   z-index: 3;
@@ -32,30 +36,30 @@
 .arm{
   background: #679EAA;
   position: absolute;
-  top: 0;
-  right: 1%;
+  top: 1%;
+  right: 3%;
   height: 100%;
   width: 24%;
   z-index: 4;
   border: solid 1px black;
-  border-radius: 30%;
+  border-radius: 32%;
 }
 .arm-copy{
   background: #679EAA;
   position: absolute;
-  top: 0;
+  top: -1;
   bottom: 10%;
-  right: 3%;
+  right: 4%;
   height: 90%;
   width: 23%;
   z-index: 6;
-  border-radius: 24%;
+  border-radius: 27%;
 }
 .hand{
   background: #679EAA;
   position: absolute;
   bottom: -2%;
-  right: 2%;
+  right: 3.5%;
   height: 15%;
   width: 24%;
   border-radius: 15%;
@@ -107,7 +111,7 @@
   top: 0;
   left: 52%;
   height: 99%;
-  width: 40%;
+  width: 46%;
   border-radius: 30%;
   z-index: 2;
 }
@@ -120,12 +124,13 @@
   width: 50%;
   border-radius: 30%;
   border: solid 1px black;
+  box-shadow: 2px 2px 5px black;
   z-index: 1;
 }
 .foot{
   background: #4A7884;
   position: absolute;
-  bottom: -1%;
+  bottom: -2%;
   left: 0;
   height: 12%;
   width: 100%;
@@ -135,7 +140,7 @@
 }
 .corpse{
   background: #5AB29E;
-  border: solid 1px black;
+  border: solid 3px black;
   position: absolute;
   top: 20%;
   left: 30%;
@@ -146,9 +151,20 @@
   border-radius: 7%;
   z-index: 3;
 }
+.corpse-copy{
+  position: absolute;
+  top: 66%;
+  left: 30%;
+  width:30%;
+  height: 4%;
+  box-shadow: 20px 20px 15px grey;
+  transform-style: preserve-3d;
+  transform: rotateY(-5deg)translateZ(4em);
+  z-index: 2;
+}
 .corpse-right{
   background: #519283;
-  border: solid 1px black;
+  border: solid 4px black;
   position: absolute;
   top: 20%;
   left: 60%;
@@ -157,6 +173,7 @@
   transform-style: preserve-3d;
   transform: rotateY(65deg) translateZ(-4em);
   border-radius: 6%;
+  box-shadow: 10px 10px 20px grey;
   z-index: 2;
 }
 .B {
@@ -303,6 +320,8 @@
   background-color: #c4f8dd;
   text-align: right;
   margin-bottom: 5px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 5px inset grey;
 }
 #currentArea{
   font-size: 2em;
@@ -361,7 +380,7 @@ box-shadow: 0px 6px 0px #0DC5D1;
       <div class="fingers right-finger"></div>
     </div>
   </div>
-
+    <div class="corpse-copy"></div>
     <div class="corpse">
       <div id="container">
         <div id="numberArea">
