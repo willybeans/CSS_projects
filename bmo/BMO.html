@@ -17,9 +17,77 @@ body{
   background-color: pink;
   box-shadow: 5px 5px 20px black;
 }
+#speech{
+    overflow-wrap: break-word;
+  word-wrap: break-word;
+  display: none;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 30%;
+  height: 30%;
+  z-index: 10;
+}
+.speech-bubble{
+  background: white;
+  border: 1px solid black;
+  border-radius: 15%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  z-index: 12
+}
+.speech-point{
+  background: white;
+  position: absolute;
+  border: 1px solid black;
+  bottom: 0%;
+  left: 0%;
+  width: 20%;
+  height: 20%;
+  z-index: 11;
+}
+.speech-point-copy{
+  background: white;
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  width: 20%;
+  height: 20%;
+  z-index: 13;
+}
+#solution{
+  position: absolute;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-size: 1em;
+  top: 50%;
+  right: 0%;
+  width: 100%;
+  height: 40%;
+}
+#equation{
+  position: absolute;
+  text-align: center;
+  top: 5%;
+  left: 0%;
+  width: 100%;
+  height:30%;
+}
+#equals{
+  position: absolute;
+  font-size: 1.5em;
+  text-align: center;
+  top: 30%;
+  left: 0%;
+  width: 100%;
+  height: 10%;
+}
 .left-arm{
   position: absolute;
-
   top: 30%;
   left: 20%;
   width: 5%;
@@ -301,7 +369,6 @@ body{
   background: black;
   border-radius: 50%;
 }
-
 #container {
   width: 80%;
   height: 80%;
@@ -312,19 +379,140 @@ body{
   grid-template-rows: auto auto auto auto auto auto auto;
   padding: 30px 20px 20px 20px;
 }
+.face{
+  position: relative;
+  width: 80%;
+  height: 20%;
+  left: 8%;
+  top: 10%;
+  margin-bottom: 5px;
+}
+.face-sleep{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-right: 5px;
+  border-radius: 5px;
+  background-color: #c4f8dd;
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px inset grey;
+}
+.eye-left-sleep{
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  width:15%;
+  height: 10%;
+}
+.eye-right-sleep{
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  right: 25%;
+  top: 30%;
+  width:15%;
+  height: 10%;
+}
+.mouth-sleep{
+  border: solid 1px #000;
+  border-color: #000 transparent transparent transparent;
+  border-radius: 100%/100px 100px 0 0;
+  position: absolute;
+  right: 40%;
+  top: 65%;
+  width: 20%;
+  height: 5%;
+}
+.face-happy{
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #c4f8dd;
+  padding-right: 5px;
+  border-radius: 5px;
+  background-color: #c4f8dd;
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px inset grey;
+}
+.eye-left-happy{
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  left: 25%;
+  top: 10%;
+  width:8%;
+  height: 30%;
+}
+.eye-right-happy{
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  right: 25%;
+  top: 10%;
+  width:8%;
+  height: 30%;
+}
+.mouth-happy{
+  background: #43BE4C;
+  border-radius: 50%;
+  border: solid 1px black;
+  position: absolute;
+  right: 40%;
+  top: 40%;
+  width:20%;
+  height: 50%;
+  z-index: 11;
+}
+.mouth-happy-cover{
+  background: #c4f8dd;
+  border-radius: 40%;
+  border-bottom: solid 1px black;
+  position: absolute;
+  right: 41%;
+  top: 20%;
+  width:20%;
+  height: 50%;
+  z-index: 13;
+}
+.tooth{
+  background: white;
+  border-radius: 30%;
+  border-bottom: solid 1px black;
+  position: absolute;
+  right: 10%;
+  top: 18%;
+  width:80%;
+  height: 50%;
+  z-index: 14;
+  transform: rotate(-10deg);
+}
+.tounge{
+  background: #61FE6F;
+  border-radius: 80%;
+  position: absolute;
+  right: 10%;
+  bottom: 1%;
+  width:70%;
+  height: 40%;
+  z-index: 13;
+  transform: rotate(-10deg);
+}
 #numberArea {
-  grid-column: 1 / span 4;
-  grid-row: 1;
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
   padding-right: 5px;
   border-radius: 5px;
   background-color: #c4f8dd;
   text-align: right;
   margin-bottom: 5px;
   border: 1px solid black;
-  box-shadow: 1px 1px 5px inset grey;
-}
-#currentArea{
-  font-size: 2em;
+  box-shadow: 1px 1px 2px inset grey;
+  z-index: 16;
 }
 #totalArea{
   position: relative;
@@ -333,7 +521,6 @@ body{
   height: 25px;
   font-size: 1em;
 }
-
 #bAC {
   grid-column: 3 / span 1;
 }
@@ -342,8 +529,8 @@ body{
 }
 #b\+ {
   grid-column: 4;
-  grid-row-start: 5;
-  grid-row-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 6;
 }
 
 #bAC, #bCE { background-color: red;}
@@ -358,92 +545,121 @@ body{
   background-color: #EA0653;
 }
 .button{
-background: #1200B9;
-border: 1px solid green;
--webkit-box-shadow: 0px 6px 0px #0DC5D1;
--moz-box-shadow: 0px 6px 0px #0DC5D1;
-box-shadow: 0px 6px 0px #0DC5D1;
+font-weight: bold;
+background: #2AFEF7;
+border: 1px solid black;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    -moz-box-shadow: 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    box-shadow: 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
 }
 
 </style>
 </head>
 <body>
-
-<div class="wrapper">
-  <div class="left-arm"></div>
-  <div class="right-arm">
-    <div class="arm"></div>
-    <div class="arm-copy"></div>
-    <div class="hand">
-      <div class="fingers left-finger"></div>
-      <div class="fingers middle-finger"></div>
-      <div class="fingers right-finger"></div>
+  <div class="wrapper">
+    <div id="speech">
+      <div class="speech-point"></div>
+      <div class="speech-point-copy"></div>
+          <div class="speech-bubble">
+            <div id="equation"> </div>
+            <div id="equals">=</div>
+            <div id="solution"> </div>
+         </div>
     </div>
-  </div>
-    <div class="corpse-copy"></div>
-    <div class="corpse">
-      <div id="container">
-        <div id="numberArea">
-          <div id="currentArea">0</div>
-          <div id="totalArea">0</div>
-        </div>
-      </div>
-    </div>
-    <div class="corpse-right">
-
-      <div class="speaker">
-        <div class="speaker-grid">
-          <div class="grid-item-blank"></div>
-          <div class="grid-item">'</div>
-          <div class="grid-item-blank"></div>
-          <div class="grid-item">'</div>
-          <div class="grid-item-blank"></div>
-          <div class="grid-item">'</div>
-          <div class="grid-item-blank"></div>
-          <div class="grid-item">'</div>
-          <div class="grid-item-blank"></div>
-          <div class="grid-item">'</div>
-          <div class="grid-item-blank"></div>
-          <div class="grid-item">'</div>
-          <div class="grid-item-blank"></div>
-          <div class="grid-item">'</div>
-          <div class="grid-item-blank"></div>
-        </div>
-      </div>
-
-      <div class="B">
-        <div class="B-left-line"></div>
-        <div class="B-top-loop">
-          <div class="B-inner"></div>
-        </div>
-        <div class="B-bottom-loop">
-          <div class="B-inner"></div>
-        </div>
-      </div>
-      <div class="M">
-        <div class="m-outer-left"></div>
-        <div class="m-inner-left"></div>
-        <div class="m-inner-right"></div>
-        <div class="m-outer-right"></div>
-      </div>
-      <div class="O">
-        <div class="o-outer">
-          <div class="o-inner"></div>
-        </div>
+    <div class="left-arm"></div>
+    <div class="right-arm">
+      <div class="arm"></div>
+      <div class="arm-copy"></div>
+      <div class="hand">
+        <div class="fingers left-finger"></div>
+        <div class="fingers middle-finger"></div>
+        <div class="fingers right-finger"></div>
       </div>
     </div>
+      <div class="corpse-copy"></div>
+      <div class="corpse">
+         <div class="face" id="face">
+            <div class="face-sleep" id="face-sleep">
+              <div class="eye-left-sleep"></div>
+              <div class="eye-right-sleep"></div>
+              <div class="mouth-sleep"></div>
+            </div>
+            <div class="face-happy" id="face-happy">
+              <div class="eye-left-happy"></div>
+              <div class="eye-right-happy"></div>
+              <div class="mouth-happy-cover"></div>
+              <div class="mouth-happy">
+                <div class="tooth"></div>
+                <div class="tounge"></div>
+                <div class="mouth-background"></div>
+              </div>
+            </div>
+              <div id="numberArea">
+              <div id="currentArea">0</div>
+              <div id="totalArea">0</div>
+          </div>
+          </div>
+        <div id="container"></div>
+      </div>
+      <div class="corpse-right">
+        <div class="speaker">
+          <div class="speaker-grid">
+            <div class="grid-item-blank"></div>
+            <div class="grid-item">'</div>
+            <div class="grid-item-blank"></div>
+            <div class="grid-item">'</div>
+            <div class="grid-item-blank"></div>
+            <div class="grid-item">'</div>
+            <div class="grid-item-blank"></div>
+            <div class="grid-item">'</div>
+            <div class="grid-item-blank"></div>
+            <div class="grid-item">'</div>
+            <div class="grid-item-blank"></div>
+            <div class="grid-item">'</div>
+            <div class="grid-item-blank"></div>
+            <div class="grid-item">'</div>
+            <div class="grid-item-blank"></div>
+          </div>
+        </div>
 
-  <div class="left-leg">
-    <div class="leg"></div>
-    <div class="leg-copy"></div>
-    <div class="foot"></div>
+        <div class="B">
+          <div class="B-left-line"></div>
+          <div class="B-top-loop">
+            <div class="B-inner"></div>
+          </div>
+          <div class="B-bottom-loop">
+            <div class="B-inner"></div>
+          </div>
+        </div>
+        <div class="M">
+          <div class="m-outer-left"></div>
+          <div class="m-inner-left"></div>
+          <div class="m-inner-right"></div>
+          <div class="m-outer-right"></div>
+        </div>
+        <div class="O">
+          <div class="o-outer">
+            <div class="o-inner"></div>
+          </div>
+        </div>
+      </div>
+
+    <div class="left-leg">
+      <div class="leg"></div>
+      <div class="leg-copy"></div>
+      <div class="foot"></div>
+    </div>
+    <div class="right-leg">
+      <div class="leg"></div>
+      <div class="leg-copy"></div>
+      <div class="foot"></div>
+    </div>
   </div>
-  <div class="right-leg">
-    <div class="leg"></div>
-    <div class="leg-copy"></div>
-    <div class="foot"></div>
-  </div>
-</div>
 <script src="bmo.js"></script>
 </body>
 </html>
